@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //samole
+            
             //Файл/Сохранить как
         }
 
