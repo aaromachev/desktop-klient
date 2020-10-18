@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
     public partial class Form1 : Form
     {
+
         private delegate void printer(string data);
         private delegate void cleaner();
         printer Printer;
@@ -254,6 +255,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
         private void SaveAssToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //samole
@@ -363,6 +365,16 @@ namespace WindowsFormsApp1
                 }
             }
             label9.Text = APPROXIMATE_INCOME + response[1];
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
