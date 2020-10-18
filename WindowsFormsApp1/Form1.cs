@@ -13,6 +13,7 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace WindowsFormsApp1
 {
@@ -26,7 +27,7 @@ namespace WindowsFormsApp1
         cleaner Cleaner;
         private Socket _serverSocket;
         private Thread _clientThread;
-        private string _serverHost = "localhost";
+        private string _serverHost = "25.95.120.41";
         private const int _serverPort = 9933;
         private volatile string[] response = new string[] { "0", "0" };
         private const string IS_RENTABLE_CODE = "Введенные данные показывают хороший результат рентабельности";
@@ -339,7 +340,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            _serverHost = "192.168.1.66";
+            _serverHost = "25.95.120.41";
             fun_connect();
             if (_serverSocket.Connected)
             {

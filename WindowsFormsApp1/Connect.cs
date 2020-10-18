@@ -13,6 +13,7 @@ using System.Threading;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -113,6 +114,7 @@ namespace WindowsFormsApp1
                 IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse(_serverHost), _serverPort);
                 _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 _serverSocket.Connect(ipEndPoint);
+
             }
             catch {
                 label1.Text = "Соединение установлено";
@@ -136,8 +138,18 @@ namespace WindowsFormsApp1
                 _clientThread = new Thread(listner);
                 _clientThread.IsBackground = true;
                 _clientThread.Start();
+                            Form1 form1 = new Form1();
+            this.Hide();
+            form1.ShowDialog();
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        { 
+            Form1 form1 = new Form1();
+            this.Hide();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }
